@@ -1,0 +1,118 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: whitesmoke;
+    font-family: Roboto, sans-serif;
+}
+
+.header{
+    padding: 30px 0px;
+    margin-bottom: 16px;
+    font-size: 32px;
+    color: black;
+    background-color: #8AAAE5;
+}
+
+.header > div{
+    display: flex;
+    margin: 0 auto;
+    width: 400px;
+    justify-content: space-around;
+}
+
+img{
+    width: 40px;
+}
+
+.calculator{
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 16px;
+    border: 3px solid black;
+    background-color: rgba(156, 155, 155, 0.3);
+    box-shadow: 10px 12px 24px 3px rgba(0, 0, 0, 0.4), -10px 12px 24px 3px rgba(0, 0, 0, 0.4);
+}
+
+.displayScreen{
+    text-align: right;
+    font-size: 30px;
+    padding: 10px 5px;
+    margin: 30px 0px;
+    border: 2px solid black;
+    border-radius: 4px;
+    height: 100px;
+    background-color: rgba(0, 255, 0, 0.2);
+    box-shadow: 6px 6px 16px 3px rgba(0, 0, 0, 0.15) inset, -6px -6px 16px 3px rgba(0, 0, 0, 0.15) inset;
+}
+
+.prevDisplay{
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+.btnContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.btn{
+    width: 90px;
+    height: 60px;
+    text-align: center;
+    font-size: 24px;
+    padding: 14px;
+    margin: 4px 0px;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.75);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+    transition: 0.12s;
+}
+
+.digit:hover, .decimal:hover{
+    background-color: lightslategray;
+}
+
+.unaryOperator:hover{
+    color: #1f2937;
+    background-color: lightskyblue;
+}
+
+.binaryOperator:hover{
+    background-color: lightsalmon;
+    color: black;
+}
+
+.clear:hover, .delete:hover{
+    color: black;
+    background-color: lightcoral;
+}
+
+.equals:hover{
+    background-color: lightgreen;
+    color: black;
+}
+
+.btn:active{
+    transform: scale(0.95);
+}
+
+.footer{
+    text-align: center;
+    padding: 20px 0px;
+    margin-top: 16px;
+    font-size: 24px;
+    color: black;
+    background-color: #8AAAE5;
+}

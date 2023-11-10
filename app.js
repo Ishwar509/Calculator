@@ -13,7 +13,7 @@ const sqrtPrecisionFactor = 1e4;
 
 // parameters
 let clearcurrentDisplay = false;   // clearing current display when digit for new number is taken
-let result = 0;                    // var for storing resultult of operations
+let result = 0;                    // var for storing result of operations
 let previousOperator = '+';       
 
 // Input event Handling
@@ -100,7 +100,7 @@ function handleBinaryOperation(e){
     let output = evaluate(previousOperator);
     
     // evaluating previous operation
-    let newOperator = (e.type == 'click') ? e.target.textContent : e.key;       // current operator
+    let newOperator = (e.type == 'click') ? e.target.textContent : e.key;   // current operator
 
     clearcurrentDisplay = true;
 
@@ -121,19 +121,21 @@ function handleBinaryOperation(e){
 function evaluate(operator){
     let curr = Number(currentDisplay.textContent);
 
-    if(operator === '+'){
-        return result += curr;
+    switch(operator){
+        case '+':
+            result += curr;
+            break;
+        case '-':
+            result -= curr;
+            break;
+        case '*':
+            result *= curr;
+            break;
+        case '/':
+            result /= curr;
     }
-    
-    if(operator === '-'){
-        return result -= curr;
-    }
-    
-    if(operator === '*'){
-        return result *= curr;
-    }
-    
-    return result /= curr;
+
+    return result;
 }
 
 // Handling digit inputs
